@@ -8,23 +8,14 @@
 
     <Label Text="Willkommen auf der Startseite!"
            FontSize="14"
+           TextColor="Green"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
 
     <Button Text="Angebot erstellen"
             HorizontalOptions="Center"
             VerticalOptions="CenterAndExpand"
-            Clicked="OnButtonClickedLogin" />
-
-    <Button Text="Angebote durchsuchen"
-            HorizontalOptions="Center"
-            VerticalOptions="CenterAndExpand"
-            Clicked="OnButtonClickedRegistrierung" />
-    
-    <Button Text="Angebote bearbeiten"
-            HorizontalOptions="Center"
-            VerticalOptions="CenterAndExpand"
-            Clicked="OnButtonClickedRegistrierung" />
+            Clicked="OnButtonClickedCreate" />
 
   </StackLayout>
 </ContentPage>

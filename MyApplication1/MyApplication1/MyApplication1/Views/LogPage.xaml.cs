@@ -14,5 +14,10 @@ namespace MyApplication1.Views
         {
             InitializeComponent();
         }
+
+        void OnButtonClickedCreate(object sender, EventArgs args)
+        {
+            Navigation.PushAsync(new CreatePage());
+        }
     }
 }
