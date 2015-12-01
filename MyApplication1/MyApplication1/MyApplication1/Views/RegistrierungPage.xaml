@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApplication1.Views.RegistrierungPage">
+  <StackLayout>
+    
+    <Entry Placeholder="Benutzername"/>
+    <Entry Placeholder="E-Mail" />
+    <Entry Placeholder="Firma" />
+    <Entry IsPassword="true"
+           Placeholder="Passwort" />
+    <Entry IsPassword="true"
+           Placeholder="Passwort wiederholen" />
+
+    <Button Text="Submit"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand"
+            Clicked="OnButtonClickedSubmit" />
+  
+  </StackLayout>
+  
+</ContentPage>

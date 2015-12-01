@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApplication1.HelloXamlPage"
+             Title="Hello XAML Page"
+             Padding="10, 40, 10, 10">
+  
+
+  
+  <StackLayout>
+
+    <Label Text="SFB" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center"
+           IsVisible="true"
+           FontSize="26"
+           FontAttributes="Bold"
+           TextColor="Green" />
+    
+    <Label Text="Suchen, finden, bauen mit Kubix³"
+           VerticalOptions="Center"
+           HorizontalOptions="Center"
+           IsVisible="true"
+           FontSize="18"
+           FontAttributes="Bold"
+           TextColor="Green" />
+    
+    <Entry Placeholder="Benutzername"
+           TextColor="Green"/>
+    <Entry IsPassword="true"
+           Placeholder="Passwort"
+           TextColor="Green"/>
+    
+    <Label Text="Bitte registrieren Sie sich, wenn Sie neu sind!"
+           FontSize="14"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+    
+    <Button Text="Login"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand"
+            Clicked="OnButtonClickedLogin" />
+    
+    <Button Text="Registrieren"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand"
+            Clicked="OnButtonClickedRegistrierung" />
+  
+  </StackLayout>
+
+</ContentPage>

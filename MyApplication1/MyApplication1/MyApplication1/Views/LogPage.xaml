@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApplication1.Views.LogPage">
+  
+  
+  <StackLayout>
+
+    <Label Text="Willkommen auf der Startseite!"
+           FontSize="14"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand" />
+
+    <Button Text="Angebot erstellen"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand"
+            Clicked="OnButtonClickedLogin" />
+
+    <Button Text="Angebote durchsuchen"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand"
+            Clicked="OnButtonClickedRegistrierung" />
+    
+    <Button Text="Angebote bearbeiten"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand"
+            Clicked="OnButtonClickedRegistrierung" />
+
+  </StackLayout>
+</ContentPage>
