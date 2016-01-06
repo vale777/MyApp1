@@ -1,5 +1,29 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyApplication1.Views.CreatePage">
-</TabbedPage>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="MyApplication1.Views.CreatePage"
+            Title="Anzeige erstellen">
+
+  <StackLayout>
+    
+    <Entry Placeholder="Titel"/>
+    
+    <Entry Placeholder="Beschriebung max. 300 Zeichen" />
+   
+    <Label Text="Kategorie"
+           FontSize="20"
+           HorizontalOptions="Center"/>
+    
+    <ListView x:Name="category"
+              ItemTapped="OnCategoryTapped"
+              ItemsSource="{Binding .}" />
+    
+    <Button Text="Weiter"
+            HorizontalOptions="Center"
+            VerticalOptions="CenterAndExpand"
+            Clicked="OnContinueClicked" />
+    <!--Button wird nicht angezeigt-->
+    
+  </StackLayout>
+  
+</ContentPage>

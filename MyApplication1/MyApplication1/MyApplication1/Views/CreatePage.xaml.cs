@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,46 +9,26 @@ using Xamarin.Forms;
 
 namespace MyApplication1.Views
 {
-    public partial class CreatePage : TabbedPage
+    public partial class CreatePage : ContentPage
     {
         public CreatePage()
         {
-            this.Title = "Angebot erstellen";
+            InitializeComponent();
 
-            this.ItemsSource = new NamedTab[]
-            {
-                new NamedTab ("Schritt eins"),
-                new NamedTab ("Schritt zwei"),
-                new NamedTab ("Schritt drei"),
-                new NamedTab ("Schritt vier")
-            };
-
-            this.ItemTemplate = new DataTemplate(() => {
-                return new NamedTabPage();
-            });
+            this.BindingContext = new [] { "Holz", "Metall", "Glas", "Baustoff", "Sonstiges" };
         }
-    }
 
-    class NamedTab
-    {
-        public NamedTab(string name)
+        void OnCategoryTapped (object sender, ItemTappedEventArgs e)
         {
-            this.Name = name;
+            if (e == null) return;
+            Debug.WriteLine("Kategorie: " + e.Item);
+            ((ListView)sender).SelectedItem = null;
         }
 
-        public string Name { private set; get; }
-
-        public override string ToString()
+        void OnContinueClicked(object sender, EventArgs args)
         {
-            return Name;
+            Navigation.PushAsync(new CreatePageTwo());
         }
-    }
-
-    public partial class NamedTabPage : ContentPage
-    {
-        public NamedTabPage()
-        {
-            this.SetBinding(ContentPage.TitleProperty, "Name");
-        }
+        //Button wird nicht angezeigt
     }
 }
