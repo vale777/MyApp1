@@ -8,18 +8,18 @@ using Xamarin.Forms;
 
 namespace MyApplication1.Views
 {
-    class TabbedPageDemoPage : TabbedPage
+    public partial class CreatePage : TabbedPage
     {
-        public TabbedPageDemoPage()
+        public CreatePage()
         {
             this.Title = "Angebot erstellen";
 
             this.ItemsSource = new NamedTab[]
             {
-                new NamedTab ("Page One"),
-                new NamedTab ("Page Two"),
-                new NamedTab ("Page Three"),
-                new NamedTab ("Page Four")
+                new NamedTab ("Schritt eins"),
+                new NamedTab ("Schritt zwei"),
+                new NamedTab ("Schritt drei"),
+                new NamedTab ("Schritt vier")
             };
 
             this.ItemTemplate = new DataTemplate(() => {
