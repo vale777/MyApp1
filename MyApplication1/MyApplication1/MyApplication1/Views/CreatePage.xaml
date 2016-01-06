@@ -21,7 +21,7 @@
     <Button Text="Weiter"
             HorizontalOptions="Center"
             VerticalOptions="CenterAndExpand"
-            Clicked="OnContinueClicked" />
+            Clicked="OnButtonClickedContinue" />
     <!--Button wird nicht angezeigt-->
     
   </StackLayout>

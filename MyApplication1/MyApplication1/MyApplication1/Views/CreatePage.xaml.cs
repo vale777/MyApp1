@@ -25,7 +25,7 @@ namespace MyApplication1.Views
             ((ListView)sender).SelectedItem = null;
         }
 
-        void OnContinueClicked(object sender, EventArgs args)
+        void OnButtonClickedContinue(object sender, EventArgs args)
         {
             Navigation.PushAsync(new CreatePageTwo());
         }
