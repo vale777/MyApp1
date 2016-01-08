@@ -13,6 +13,7 @@ namespace MyApplication1.Views
         public ArticlePage()
         {
             InitializeComponent();
+
         }
     }
 }

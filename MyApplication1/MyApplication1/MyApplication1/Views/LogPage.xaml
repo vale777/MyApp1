@@ -13,6 +13,15 @@
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
 
+    <ListView x:Name="Angebote">
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <TextCell Text="{Binding product}"/>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+    
+
     <Button Text="Angebot erstellen"
             HorizontalOptions="Center"
             VerticalOptions="CenterAndExpand"
