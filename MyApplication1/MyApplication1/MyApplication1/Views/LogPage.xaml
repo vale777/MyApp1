@@ -6,21 +6,15 @@
   
   
   <StackLayout>
-
+    
     <Label Text="Willkommen auf der Startseite!"
-           FontSize="14"
+           FontSize="18"
            TextColor="Green"
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
 
-    <ListView x:Name="Angebote">
-      <ListView.ItemTemplate>
-        <DataTemplate>
-          <TextCell Text="{Binding product}"/>
-        </DataTemplate>
-      </ListView.ItemTemplate>
-    </ListView>
-    
+    <ListView x:Name="Angebote"
+              ItemsSource="{Binding .}" />    
 
     <Button Text="Angebot erstellen"
             HorizontalOptions="Center"

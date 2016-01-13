@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,17 +8,17 @@ using Xamarin.Forms;
 
 namespace MyApplication1.Views
 {
-    public partial class CreatePageTwo : ContentPage
+    public partial class CreatePageThree : ContentPage
     {
-        public CreatePageTwo()
+        public CreatePageThree()
         {
             InitializeComponent();
         }
 
         void OnButtonClickedContinue(object sender, EventArgs args)
         {
-            
-            Navigation.PushAsync(new CreatePageThree());
+            DisplayAlert("Glückwunsch!", "Der Artikel wurde eingestellt", "Ok");
+            Navigation.PushAsync(new LogPage());
         }
     }
 }

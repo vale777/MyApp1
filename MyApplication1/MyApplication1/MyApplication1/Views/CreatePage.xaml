@@ -15,14 +15,13 @@
            HorizontalOptions="Center"/>
     
     <ListView x:Name="category"
-              ItemTapped="OnCategoryTapped"
+              ItemSelected="OnSelection"
               ItemsSource="{Binding .}" />
     
     <Button Text="Weiter"
             HorizontalOptions="Center"
             VerticalOptions="CenterAndExpand"
             Clicked="OnButtonClickedContinue" />
-    <!--Button wird nicht angezeigt-->
     
   </StackLayout>
   

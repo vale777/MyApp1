@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApplication1.Views.CreatePageThree"
+             Title="Anzeige erstellen">
+  <StackLayout>
+
+    <Label Text="Abhol-Adresse"
+           VerticalOptions="CenterAndExpand"/>
+    
+    <Entry Placeholder="Straße"
+           VerticalOptions="CenterAndExpand"/>
+    <Entry Placeholder="PLZ"
+           VerticalOptions="CenterAndExpand"/>
+    <Entry Placeholder="Ort"
+           VerticalOptions="CenterAndExpand"/>
+
+    <DatePicker Format="D"
+                VerticalOptions="CenterAndExpand"/>
+
+    <Button Text="Anziege erstellen"
+            VerticalOptions="CenterAndExpand"
+            Clicked="OnButtonClickedContinue" />
+
+  </StackLayout>
+</ContentPage>

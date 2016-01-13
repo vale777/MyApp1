@@ -18,17 +18,18 @@ namespace MyApplication1.Views
             this.BindingContext = new [] { "Holz", "Metall", "Glas", "Baustoff", "Sonstiges" };
         }
 
-        void OnCategoryTapped (object sender, ItemTappedEventArgs e)
+        void OnSelection(object sender, SelectedItemChangedEventArgs e)
         {
-            if (e == null) return;
-            Debug.WriteLine("Kategorie: " + e.Item);
-            ((ListView)sender).SelectedItem = null;
+            if (e.SelectedItem == null)
+            {
+                return;
+            }
+            DisplayAlert("augewählte Kategorie", e.SelectedItem.ToString(), "Ok");
         }
 
         void OnButtonClickedContinue(object sender, EventArgs args)
         {
             Navigation.PushAsync(new CreatePageTwo());
         }
-        //Button wird nicht angezeigt
     }
 }

@@ -13,15 +13,12 @@ namespace MyApplication1.Views
         public LogPage()
         {
             InitializeComponent();
-            
-            
         }
 
         public void DisplayInserat(aspverbindung.Inserat product)
         {
-            Angebote.ItemsSource = product.Name;
-                     
-            //this.BindingContext = new[] { "{0}", product.Name };
+            Angebote.ItemsSource = product.Name;   
+            this.BindingContext = new[] { "{0}", product.Name };
         }
 
         void OnButtonClickedCreate(object sender, EventArgs args)

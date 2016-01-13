@@ -18,10 +18,7 @@ namespace MyApplication1
 
         void OnButtonClickedLogin(object sender, EventArgs args)
         {
-            /*Button button = (Button)sender;
-            await DisplayAlert("Clicked!",
-                "The button labeled '" + button.Text + "' has been clicked",
-                "OK");*/
+            DisplayAlert("Hallo", name.ToString(), "Fortsetzen");
             Navigation.PushAsync(new LogPage());
         }
 
