@@ -11,10 +11,7 @@ namespace MyApplication1
     {
         public App()
         {
-            // The root page of your application
-            MainPage = new NavigationPage (new HelloXamlPage());
-            Uri uri = new Uri("http://localhost:49966/odata/");
-            var container = new aspverbindung.Container(uri);
+            MainPage = new NavigationPage(new HelloXamlPage());
         }
 
         protected override void OnStart()
