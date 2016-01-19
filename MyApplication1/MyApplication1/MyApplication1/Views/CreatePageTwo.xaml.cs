@@ -11,9 +11,12 @@ namespace MyApplication1.Views
 {
     public partial class CreatePageTwo : ContentPage
     {
+
         public CreatePageTwo()
         {
             InitializeComponent();
+
+
         }
 
         void OnButtonClickedContinue(object sender, EventArgs args)

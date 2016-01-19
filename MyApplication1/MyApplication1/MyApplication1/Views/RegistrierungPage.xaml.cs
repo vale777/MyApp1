@@ -30,7 +30,8 @@ namespace MyApplication1.Views
 
         void OnButtonClickedSubmit(object sender, EventArgs args)
         {
-
+            DisplayAlert("Glückwunsch!", "Sie haben sich erfolgreich registriert!", "Fortsetzen");
+            Navigation.PushAsync(new LogPage());
         }
     }
 }

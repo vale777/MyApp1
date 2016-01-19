@@ -2,50 +2,84 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyApplication1.HelloXamlPage"
-             Title="SFB"
-             Padding="10, 40, 10, 10">
-  
+             Title="SFB">
+
+  <ContentPage.Resources>
+
+    <ResourceDictionary>
+
+      <LayoutOptions x:Key="horzOptions"
+                     Alignment="Center" />
+
+      <LayoutOptions x:Key="vertOptions"
+                     Alignment="Center"
+                     Expands="True" />
+
+      <x:Double x:Key="borderWidth">3</x:Double>
+
+      <OnPlatform x:Key="textColor"
+                  x:TypeArguments="Color"
+                  iOS="Red"
+                  Android="Aqua"
+                  WinPhone="#80FF80" />
+
+      <Font x:Key="font">Large</Font>
+      
+    </ResourceDictionary>
+
+  </ContentPage.Resources>
 
   
   <StackLayout>
 
     <Label Text="SFB" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center"
+           HorizontalOptions="{StaticResource horzOptions}"
+           VerticalOptions="{StaticResource vertOptions}"
            IsVisible="true"
            FontSize="26"
            FontAttributes="Bold"
-           TextColor="Green" />
+           TextColor="{StaticResource textColor}"/>
     
     <Label Text="Suchen, finden, bauen mit Kubix³"
-           VerticalOptions="Center"
-           HorizontalOptions="Center"
+           HorizontalOptions="{StaticResource horzOptions}"
+           VerticalOptions="{StaticResource vertOptions}"
            IsVisible="true"
            FontSize="20"
            FontAttributes="Bold"
-           TextColor="Green" />
+           TextColor="{StaticResource textColor}"/>
     
     <Entry x:Name="name"
+           HorizontalOptions="{StaticResource horzOptions}"
+           VerticalOptions="{StaticResource vertOptions}"
            Placeholder="Benutzername"
-           TextColor="Green"/>
+           TextColor="{StaticResource textColor}"/>
+    
     <Entry IsPassword="true"
+           HorizontalOptions="{StaticResource horzOptions}"
+           VerticalOptions="{StaticResource vertOptions}"
            Placeholder="Passwort"
-           TextColor="Green"/>
+           TextColor="{StaticResource textColor}"/>
     
     <Label Text="Bitte registrieren Sie sich, wenn Sie neu sind!"
            FontSize="16"
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand"
-           TextColor="Green"/>
+           HorizontalOptions="{StaticResource horzOptions}"
+           VerticalOptions="{StaticResource vertOptions}"
+           TextColor="{StaticResource textColor}"/>
     
     <Button Text="Login"
-            HorizontalOptions="Center"
-            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="{StaticResource horzOptions}"
+            VerticalOptions="{StaticResource vertOptions}"
+            BorderWidth="{StaticResource borderWidth}"
+            TextColor="{StaticResource textColor}"
+            Font="{StaticResource font}"
             Clicked="OnButtonClickedLogin" />
     
     <Button Text="Registrieren"
-            HorizontalOptions="Center"
-            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="{StaticResource horzOptions}"
+            VerticalOptions="{StaticResource vertOptions}"
+            BorderWidth="{StaticResource borderWidth}"
+            TextColor="{StaticResource textColor}"
+            Font="{StaticResource font}"
             Clicked="OnButtonClickedRegistrierung" />
   
   </StackLayout>

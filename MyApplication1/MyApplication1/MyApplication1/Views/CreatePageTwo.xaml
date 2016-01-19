@@ -7,9 +7,6 @@
     <StackLayout>
       <Button Text="Bild aufnehmen" Command="{Binding TakePictureCommand}" />
       <Button Text="Bild hochladen" Command="{Binding SelectPictureCommand}" />
-      <Button Text="Video hochladen" Command="{Binding SelectVideoCommand}" />
-      <Image Source="{Binding ImageSource}" VerticalOptions="CenterAndExpand" />
-      <Entry Text="{Binding VideoInfo}" VerticalOptions="CenterAndExpand" />
       <Button Text="Weiter"
         HorizontalOptions="Center"
         VerticalOptions="CenterAndExpand"

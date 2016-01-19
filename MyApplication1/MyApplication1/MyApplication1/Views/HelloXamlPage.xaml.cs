@@ -18,7 +18,7 @@ namespace MyApplication1
 
         void OnButtonClickedLogin(object sender, EventArgs args)
         {
-            DisplayAlert("Hallo", name.ToString(), "Fortsetzen");
+            DisplayAlert("Guten Tag!", "Sie haben sich erflogreich angemeldet!", "Fortsetzen");
             Navigation.PushAsync(new LogPage());
         }
 

@@ -17,7 +17,7 @@ namespace MyApplication1.Views
 
         void OnButtonClickedContinue(object sender, EventArgs args)
         {
-            DisplayAlert("Glückwunsch!", "Der Artikel wurde eingestellt", "Ok");
+            DisplayAlert("Glückwunsch!", "Der Artikel wurde eingestellt!", "Ok");
             Navigation.PushAsync(new LogPage());
         }
     }

@@ -13,12 +13,15 @@ namespace MyApplication1.Views
         public LogPage()
         {
             InitializeComponent();
+
+            Uri uri = new Uri("http://localhost:49966/odata/");
+            var container = new aspverbindung.Container(uri);
         }
 
         public void DisplayInserat(aspverbindung.Inserat product)
         {
-            Angebote.ItemsSource = product.Name;   
-            this.BindingContext = new[] { "{0}", product.Name };
+            Angebote.ItemsSource = product.Name;
+            BindingContext = new[] { "{0}", product.Name, "{1}", product.Beschreibung };
         }
 
         void OnButtonClickedCreate(object sender, EventArgs args)
