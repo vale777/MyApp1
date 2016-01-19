@@ -17,7 +17,7 @@ namespace MyApplication1.Views
 
         public void DisplayInserat(aspverbindung.Inserat product)
         {
-            Angebote.ItemsSource = product.Name;   
+            Angebote.ItemsSource = product.Name;  
             this.BindingContext = new[] { "{0}", product.Name };
         }
 
