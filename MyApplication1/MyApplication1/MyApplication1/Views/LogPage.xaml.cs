@@ -28,5 +28,10 @@ namespace MyApplication1.Views
         {
             Navigation.PushAsync(new CreatePage());
         }
+
+        void OnButtonClickedSearch(object sender, EventArgs args)
+        {
+            Navigation.PushAsync(new ArticlePage());
+        }
     }
 }
