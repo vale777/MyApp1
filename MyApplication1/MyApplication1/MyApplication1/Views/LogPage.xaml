@@ -13,8 +13,8 @@
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
 
-    <ListView x:Name="Angebote"
-              ItemsSource="{Binding }" />    
+    <ListView x:Name="offers"
+              ItemsSource="{Binding .}" />    
 
     <Button Text="Angebot erstellen"
             HorizontalOptions="Center"
