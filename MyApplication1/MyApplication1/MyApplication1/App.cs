@@ -11,7 +11,9 @@ namespace MyApplication1
     {
         public App()
         {
-            MainPage = new NavigationPage(new HelloXamlPage());
+            // The root page of your application
+            MainPage = new NavigationPage (new HelloXamlPage());
+
         }
 
         protected override void OnStart()

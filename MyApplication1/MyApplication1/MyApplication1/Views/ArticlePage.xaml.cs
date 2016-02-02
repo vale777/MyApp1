@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyApplication1.DataModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,12 +9,13 @@ using Xamarin.Forms;
 
 namespace MyApplication1.Views
 {
-    public partial class ArticlePage : ContentPage
+    public partial class ArticlePage
     {
         public ArticlePage()
         {
             InitializeComponent();
 
+            this.ItemsSource = ArticleDataModel.All;
         }
     }
 }
